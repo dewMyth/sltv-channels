@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -18,6 +18,9 @@
         { name: "HIRU TV", href: "https://tv.garden/lk/8GtOpx9EPmjKvR" },
         { name: "ITN", href: "https://tv.garden/lk/Mu5GYs1QS32GkH" },
         { name: "SIRASA TV", href: "https://tv.garden/lk/aV036NVLZZ7kQs" },
+        { name: "SIRASA TV", href: "https://tv.garden/lk/aV036NVLZZ7kQs" },
+        { name: "SIRASA TV", href: "https://tv.garden/lk/aV036NVLZZ7kQs" },
+        { name: "SIRASA TV", href: "https://tv.garden/lk/aV036NVLZZ7kQs" },
       ];
 
       const container = document.getElementById("buttons");
@@ -25,6 +28,60 @@
       channels.forEach((ch) => {
         const a = document.createElement("a");
         a.className = "tv-btn";
+        a.href = ch.href;
+        a.target = "_blank";
+        a.rel = "noopener noreferrer";
+        a.textContent = ch.name;
+        container.appendChild(a);
+      });
+    </script>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>TV Channels</title>
+
+    <!-- Link external CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>TV Channels</h1>
+
+      <div id="buttons" class="grid" aria-label="List of TV channels">
+        <!-- Buttons injected by JS -->
+      </div>
+
+      <p class="note">
+        Edit the <code>channels</code> array in the script to change
+        names/links.
+      </p>
+    </div>
+
+    <script>
+      // ➜ EDIT YOUR CHANNELS HERE
+      const channels = [
+        { name: "HIRU TV", href: "https://tv.garden/lk/8GtOpx9EPmjKvR" },
+        { name: "ITN", href: "https://tv.garden/lk/Mu5GYs1QS32GkH" },
+        { name: "SIRASA TV", href: "https://tv.garden/lk/aV036NVLZZ7kQs" },
+        { name: "RUPAVAHINI", href: "https://tv.garden/lk/0MA7G0qiGWKeoT" },
+        { name: "SIYATHA", href: "https://tv.garden/lk/93ImfKCer0mJxB" },
+        { name: "SWARNAWAHINI", href: "https://tv.garden/lk/eSMkzAvr1JhXfB" },
+        { name: "DERANA", href: "https://tv.garden/lk/nfv47MvGQGUHjk" },
+        { name: "TV1", href: "https://tv.garden/lk/tc42oehtHOTMDJ" },
+      ];
+
+      const container = document.getElementById("buttons");
+
+      channels.forEach((ch) => {
+        const a = document.createElement("a");
+        a.className = "tv-btn";
+        a.setAttribute("role", "link");
+        a.setAttribute("aria-label", `Open ${ch.name}`);
         a.href = ch.href;
         a.target = "_blank";
         a.rel = "noopener noreferrer";
