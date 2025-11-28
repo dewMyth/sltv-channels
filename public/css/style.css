@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.tv-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    background: white;
+    border-radius: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tv-btn:hover {
+    background: #e9eefc;
+    transform: translateY(-3px);
+    transition: 0.2s;
+}

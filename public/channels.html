@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>TV Channels</title>
+
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <h1>TV Channels</h1>
+
+    <div id="buttons" class="grid"></div>
+
+    <script>
+      // edit your channels and links here
+      const channels = [
+        { name: "HIRU TV", href: "https://tv.garden/lk/8GtOpx9EPmjKvR" },
+        { name: "ITN", href: "https://tv.garden/lk/Mu5GYs1QS32GkH" },
+        { name: "SIRASA TV", href: "https://tv.garden/lk/aV036NVLZZ7kQs" },
+      ];
+
+      const container = document.getElementById("buttons");
+
+      channels.forEach((ch) => {
+        const a = document.createElement("a");
+        a.className = "tv-btn";
+        a.href = ch.href;
+        a.target = "_blank";
+        a.rel = "noopener noreferrer";
+        a.textContent = ch.name;
+        container.appendChild(a);
+      });
+    </script>
+  </body>
+</html>
